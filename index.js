@@ -14,7 +14,11 @@ app.use(
 );
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
-app.get("/", (req, res) => {});
+
+app.get("/", (req, res) => {
+    res.send("Selamat Datang!")  
+});
+
 app.post("/authlogin", (req, res) => {
     var email = req.body.email;
     var password = req.body.password;
